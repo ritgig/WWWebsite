@@ -1,0 +1,173 @@
+/*Blue color scheme*/
+.color-base { background-color: #003C73; }
+.color-light {background-color: #0094F7; }
+.color-light-accent {background-color: #14A9F7; }
+.color-medium {background-color: #0061C4; }
+.color-medium-accent {background-color: #0E76D1; }
+.color-dark {background-color: #0053AA; }
+.color-dark-accent {background-color: #1067B8; }
+
+
+.vhBox {
+    min-height: 100vh;
+}
+
+.readingSize {
+    font-size: 16pt !important;
+}
+
+p {
+    font-weight: 300 !important;
+}
+
+.listPadding li{
+    padding-top: 20px !important;
+}
+
+.row {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+
+.background1 {
+    background: url('images/main.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    min-height: 100vh;
+}
+
+.background2 {
+    background: url('images/ripCam.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    min-height: 100vh;
+}
+
+.background3 {
+    background: url('images/upStairs.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    min-height: 100vh;
+}
+
+.background4 {
+    background: url('images/wheel.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    min-height: 100vh;
+}
+
+.lightText {
+    color: #E7E7E7;
+}
+
+.clearPadding {
+    padding: 0px 0px 0px 0px !important;
+}
+
+.clearPaddingRight {
+    padding-right: 0px !important;
+}
+
+.clearMargin {
+    margin: 0px 0px 0px 0px !important;
+}
+
+.clearBorder {
+    border: none !important;
+}
+
+.active {
+    background-color: #FFC107 !important;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix + .container-fluid {
+    padding-top: 70px;
+}
+
+.navbar {
+    border-radius: 0px !important;
+    z-index: 1000;
+}
+
+.jumbotron {
+    border-radius: 0px !important;
+}
+
+.jumbotronTop {
+    margin-top: 30px;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+}
+
+.titleImage {
+    display: inline-block;
+    margin-left: -230px;
+    left: 50%;
+    position: fixed;
+    margin-top: 12vh;
+    z-index: -10;
+}
+
+.pitch {
+    margin-left: auto;
+    margin-top: 50vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -100;
+    color: #e7e7e7;
+}
+
+.content {
+    padding-top: 60%;
+}
+
+/*.parent {
+    position: relative !important;
+    font-weight: 300 !important;
+}
+
+.child {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 100vw;
+}*/
+
+.center-aligned {
+    text-align: center;
+}
+
+.scrollForMore {
+    margin-top: -80px;
+    color: #e7e7e7;
+}
+
+.scrollForMore a {
+    font-size: 16pt;
+    color: #e7e7e7;
+}
+
+.scrollForMore a:visited {
+    color: #e7e7e7;
+}
+
+.scrollForMore a:active {
+    color: #e7e7e7;
+}

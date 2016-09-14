@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("nav").attr("data-offset-top", $(window).height());
+
+            //When the window is resized, this function is called
+            $(window).resize(function() {
+                $("nav").attr("data-offset-top", $(window).height());
+                console.log($(window).height()); //even though this changes on window resize, apparently the data-offset-top isn't changing
+            })
+
+            $("nav").wrap('<div class="nav-placeholder"></div>');
+            $(".nav-placeholder").height($("nav").outerHeight());
+
+
+            $('body').scrollspy({target: ".navbar"})
+
+            // Add smooth scrolling to all links inside a navbar
+            $(".smoothLink a").on('click', function(event){
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+
+        //window.addEventListener("scroll", function(){
+            //var singleScreen = $(document).height() / $(window).height();
+
+            //var opacity = window.scrollY / $(document).height();
+            
+            //console.log($(window).height() / $(document).height());
+
+            //$('.navbar').css("opacity", (opacity - $(window).height() / $(document).height()) * 12);
+            //if (window.scrollY > 500) {
+            //    $('.navbar').fadeIn();
+            //}
+            //else {
+            //    $('.navbar').fadeOut();
+            //}
+        //}, false);
+    </script>
+
+
+    <title>WordWells</title>
+</head>
+<body class="background1" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <div class="title">
+        <img class="titleImage" src="images/WW_shirt.png" width="461" height="329">
+        <div class="pitch">
+            <h1>Explore an ancient structure on an alien planet</h1>
+            <h1>where words and sounds have power</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid clearPadding"><div class="vhBox"></div></div>
+
+    <nav class="navbar navbar-default navbar-light clearBorder smoothLink" data-spy="affix" data-offset-top="0">
+        <div class="container-fluid clearPaddingRight">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle clearBorder" data-toggle="collapse" data-target="#collapsedNav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="#">WordWells</a>
+            </div>
+
+            <div class="collapse navbar-collapse clearBorder" id="collapsedNav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#section1">Backstory</a></li>
+                    <li><a href="#section2">Purpose</a></li>
+                    <li><a href="#section3">Objective</a></li>
+                    <li><a href="#section4">Our Approach</a></li>
+                    <li><a href="#section5">Seven Gaps</a></li>
+                    <li><a href="#section6">About</a></li>
+                    <!--There won't be a tab for the timetable in the nav, but it will be a section-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="section1" class="container-fluid color-base lightText vhBox readingSize">
+        <div class="center-aligned scrollForMore smoothLink">
+            <a href="#section1" class="clearMargin"><span class="glyphicon glyphicon-chevron-down"></span></a>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 col-md-1 hidden-xs-down"></div>
+            <div class="col-lg-7 col-md-7 col-sm-12">
+                <div>
+                    <h1>&nbsp;</h1>
+                    <h1>Backstory</h1>
+                    <p>At some time in the forgotten past, the Visitors built a transport system of WordWells to connect uninhabited planets that were potential sites for habitation as their home world faced increasing challenges to support an exploding population and environmental decline. Not all the worlds proved habitable.  Cam grew up on a planet that was one of the few that developed successfully but the population lost contact with their origins and the Visitors. The underground WordWells, built to enable travel between worlds, fell into misuse and were lost. When Cam falls into a WordWell that has laid dormant for centuries, Cam is enlisted by Orb, the AI assistant that was part of a failed mission to re-establish contact to discover the fate of this planet’s settlers. Whether Cam knows it or not, the mission to return to the home world to deliver the news of this planet’s success now rests on Cam’s shoulders.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 hidden-xs-down"></div>
+        </div>
+    </div>
+
+    <div id="section2" class="container-fluid background4 lightText vhBox readingSize">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 hidden-xs-down"></div>
+            <div class="col-lg-7 col-md-7 col-sm-12">
+                <div>
+                    <h1>Purpose</h1>
+                    <p>The WordWells literacy game will attempt to address the sources of learning difficulties. WordWells will help limited literacy teens and adults quickly overcome years of reading frustration by targeting the source of reading difficulties. WordWells will combine advanced learning methods with a highly engaging platform, exploiting the full range of our innate learning abilities.</p>                    
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 hidden-xs-down"></div>
+        </div>
+    </div>
+
+    <div id="section3" class="container-fluid color-light vhBox readingSize">
+        <div class="row">
+            <div class="col-lg-1 col-md-1 hidden-sm-down"></div>
+            <div class="col-lg-7 col-md-7 col-sm-12">
+                <div>
+                    <h1>Helping Adults Become Better Readers</h1>
+                    <p>Most reading support for teens and adults use a deficit instructional model based on remedial phonics or ineffective text reading practices. WordWells will build the language and listening capabilities that empower the most proficient readers.  
+                    The game will attempt to overcomes the two major barriers to fluent, meaningful and enjoyable reading. First, English is an exceedingly complex spoken and written language, making it the hardest major to read using phonics and reading-to-read approaches.  
+                    Secondly, convergent research shows that almost all secondary students and adults struggle to read due to subtle issues processing spoken language. Reading is a receptive, or listening, language process – a fact that most literacy methods fail to address. WordWells will develops the language capabilities of successful readers by focusing on the auditory, or listening, processes that are essential to fluent, meaningful reading. People who have struggled for decades often learn to read independently when these simple listening issues are addressed. </p>
+                    <h3>Making Learning Fun</h3>
+                    <p>In most traditional learning, you start with an “A” and lose points as you go along; instead of reinforcing success, it often just punishes learners.  In a computer game, you face lots of challenges and obstacles but as you accomplish things, you gain skills, rewards and a sense of increasing accomplishment.  When well designed, computer games are satisfyingly challenging so even failing can be fun if the risks are low and you know that with effort you will eventually succeed.</p>
+                    <P>WordWells provides an environment in which learning is connected to the mission of the game. When we have a reason to learn something, a context and situation in which the learning helps us accomplish a mission,  learning has meaning and purpose.  The difficulties can become a challenge and the learning experience is more naturally motivated. The story of the WordWells and Cam’s mission with Orb will unfold as a player learns about the contents of the WordWells and travels from planet to planet on the way home. There is a reason to learn and read as the mission progresses. We know that even people who test at reading levels below their grade on traditional reading tests can read at levels high above their grade when they are intrinsically motivated, when they have a reason to read and learn.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 hidden-sm-down"></div>
+        </div>
+    </div>
+
+    <div id="section4" class="container-fluid color-medium lightText vhBox readingSize">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 hidden-xs-down"></div>
+            <div class="col-lg-7 col-md-7 col-sm-12">
+                <div>
+                    <h1>The Approach</h1>
+                    <p>An auditory approach is different, the content is unique and the delivery method is innovative.</p>
+                    <h3>Emphasize Innate Learning Abilities and Intrinsic Motivation</h3>
+                    <p>The game is based upon foundational belief that humans have immense innate learning abilities that dwarf those developed by traditional instruction and teaching methods. People are born with minds that learn from a wide range of experiences and situations. These abilities are why many four and five-year olds learn to read with little effort.</p>
+                    <p>Digital game-based learning has a unique potential to tap into these natural ways of learning by stimulating curiosity, imagination, exploration, listening and reasoning. Motivational issues, greatly ignored by most traditional methods, will be front and center in WordWells.</p>
+                    <h3>Break the Barrier Between Research Findings and Educational Practices</h3>
+                    <p>When approaching a learning challenge, the approach incorporated into WordWells starts by reviewing the cognitive, language and neuropsychological research to identify the core capabilities that empower meaningful, fluent and engaged reading in children and teens who learn to read with little effort. Then the game embodies gentle ways of wrapping research-based methods into engaging instruction.</p>
+                    <h3>Disrupt Traditional Instruction</h3>
+                    <p>Reading scores on the NAEP, the “nation’s report card” have been flat for three decades. Traditional phonics, text-based and blended approaches haven’t moved the needle. The problem isn’t just what is taught but how the instruction is delivered. WordWells will use:</p>
+                    <ul class="listPadding">
+                        <li><strong>Distributed and interleafed practiced</strong> – learners will play with small chunks of a great variety of overlapping practice rather than be drilled on one topic at a time</li>
+                        <li><strong>Overlearning</strong> - to end the learn-and-forget cycle players can practice to the point of automaticity</li>
+                        <li><strong>Reduced Error Learning</strong> – Learning to read isn’t a place where students often learn from their mistakes. WordWells will create an environment where players self-learn by being successful.</li>
+                        <li><strong>Self-Learning, Limited Teaching</strong> – After many years of being taught players will learn to read using their own mind. WordWells will let the players do the thinking and reasoning, and discover the patterns and associations to spoken language by playing a range of carefully designed mini-games.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 hidden-xs-down"></div>
+        </div>
+    </div>
+
+    <div id="section5" class="container-fluid background2 lightText vhBox readingSize">
+        <div class="row">
+            <div class="col-lg-1 col-md-1 hidden-xs-down"></div>
+            <div class="col-lg-7 col-md-7 col-sm-12">
+                <div>
+                    <h1>Seven Critical Gaps: A Different Approach to Reading Difficulties</h1>
+                    <p>WordWells is based on the belief is that there are <strong>seven critical gaps</strong> that cause protracted reading problems. These gaps are a large reason that reading scores (NAEP) are little changed over the last three decades. Almost all reading instruction overlooks these gaps, leaving millions short of full literacy.</p>
+                    <p>WordWells (WW) fills these gaps, offering a rapid path to reading success for teens and adults who have struggled for many years. WordWells dramatically improves reading by building:</p>
+                    <ol class="listPadding">
+                        <li><strong>Strong Auditory Processing</strong>: Reading is a receptive (listening) language process. WW approaches reading as largely a process providing extensive auditory practice, including age-appropriate phonemic awareness development.</li>
+                        <li><strong>Precise Discrimination Abilities</strong>: English is full of words that are similar in sound and/or spelling. Small boosts in discrimination often lead to large increases in reading accuracy.</li>
+                        <li><strong>Attention to Fine Details</strong>: Too many struggling readers guess at words, failing to attend to the finer details of spoken and written words. WW helps readers <strong>process all</strong> the details in words.</li>
+                        <li><strong>Recoding Fluency</strong>: Recoding is the ability to rapidly shift and manipulate patterns in spoken words. Recoding is highly linked to strong reading skills, turning static collections of words and phonics knowledge into a dynamic, ever-changing process to overcomes shortfalls in decoding.</li>
+                        <li><strong>Fluid Word Recognition and Naming</strong>: Fluent reading requires the rapid retrieval of words from memory, an effortless process involving recognizing-recalling-and naming. WW activities facilitate this process for deep, automatic decoding and comprehension.</li>
+                        <li><strong>Code Shifting and Generalization</strong>: English is the least phonics-friendly major language. Rules and exceptions barely make a dent in the of sound and spelling irregularities. Learning how the spoken and written code shifts is essential to mastering single and multi-syllable words.</li>
+                        <li><strong>Natural, Valuable Comprehension</strong>: Based on reasoning, story sense and imagination, it focuses on social-emotional problem-solving. Comprehending text and solving life’s problems requires more than strategies. Teens and adults have a natural ability to understand complex stories using these natural language comprehension skills. WW builds these essential skills while developing the most important life skill — social-emotional problem-solving.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 hidden-xs-down"></div>
+        </div>
+    </div>
+
+    <div id="section6" class="container-fluid color-light-accent lightText vhBox readingSize">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 hidden-xs-down"></div>
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <div>
+                    <h1>About Us</h1>
+                    <p>WordWells was developed by a team of RIT faculty and students with content and pedagogical expertise provided by Bruce Howlett of Mind4Learning.</p>
+                    <a href="about.html"><h1>Meet The Team</h1></a>                    
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 hidden-xs-down"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid background3 vhbox readingSize">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 hidden-xs-down"></div>
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <div>
+                    <!--Put links to social media/other important links here-->
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 hidden-xs-down"></div>
+        </div>
+    </div>
+
+    <!--<div id="section7" class="container-fluid color-dark vhBox readingSize">
+        <div class="row">
+            <div class="col-lg-1 col-md-1 hidden-sm-down"></div>
+            <div class="col-lg-7 col-md-7 col-sm-12">
+                <div>
+                    <h1>Timeline</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet obcaecati illum magni quidem saepe amet, aperiam deleniti quam alias pariatur. Necessitatibus praesentium quo optio dignissimos aspernatur unde quasi nihil nulla.</p>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 hidden-sm-down"></div>
+        </div>
+    </div>-->
+</body>
+</html>
